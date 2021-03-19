@@ -7,5 +7,7 @@
         <field name="email" type="text-medium"/>
         <field name="phone" type="text-medium"/>
         <field name="amount" type="text-medium"/>
+        <field name="credit_card" type="text-medium"/>
+
     </entity>
 </entities>
