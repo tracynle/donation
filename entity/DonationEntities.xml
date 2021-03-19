@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1.xsd">
+    <entity entity-name="Record" package="donation">
+        <field name="recordId" type="id" is-pk="true"/>
+        <field name="name" type="text-medium"/>
+        <field name="email" type="text-medium"/>
+        <field name="phone" type="text-medium"/>
+        <field name="amount" type="text-medium"/>
+    </entity>
+</entities>

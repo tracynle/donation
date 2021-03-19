@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/service-definition-2.1.xsd">
+    <!-- <transition name="createDonation">
+        <service-call name="Donation.CreateDonationServices.create#Donation"/>
+        <default-response url="."/>
+    </transition> -->
+    <service verb="create" noun="Record" type="entity-auto">
+        <in-parameters>
+            <auto-parameters include="all"/>
+        </in-parameters>
+        <out-parameters>
+            <auto-parameters include="pk" required="true"/>
+        </out-parameters>
+    </service>
+    <!-- <service verb="create" noun="Donation" type="inline">
+        <in-parameters>
+            <auto-parameters include="all"/>
+        </in-parameters>
+        <out-parameters>
+            <auto-parameters include="pk" required="true"/>
+        </out-parameters>
+        <actions>
+            <entity-make-value entity-name="Donation.Donation" value-field="donation"/>
+            <entity-set value-field="donation" include="all"/>
+            <if condition="!donation.donationId">
+                <entity-sequenced-id-primary value-field="donation"/>
+            </if>
+            <entity-create value-field="donation"/>
+        </actions>
+    </service> -->
+</services>

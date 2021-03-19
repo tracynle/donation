@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd"
+        require-authentication="anonymous-all">
+
+    <transition name="createDonation">
+        <!-- <service-call name="create#donation.Record"/> -->
+        <service-call name="donation.DonationServices.create#Record"/>
+        <default-response url="../confirmation"/>
+    </transition>
+
+    <widgets>
+        <label type="h1" text="Donation Component"/>
+        <container>
+            <form-single name="DonationForm" transition="createDonation">
+                <field name="name">
+                    <default-field title="Name">
+                        <text-line size="20"/>
+                    </default-field>
+                </field>
+                <field name="email">
+                    <default-field title="Email">
+                        <text-line size="20"/>
+                    </default-field>
+                </field>
+                <field name="phone">
+                    <default-field title="Phone Number">
+                        <text-line size="20"/>
+                    </default-field>
+                </field>
+                <field name="amount">
+                    <default-field title="Donation Amount">
+                        <text-line size="20"/>
+                    </default-field>
+                </field>
+                <field name="credit_card">
+                    <default-field title="Credit Card Number">
+                        <text-line size="20"/>
+                    </default-field>
+                </field>
+                <!-- <auto-fields-entity entity-name="donation.Record" field-type="edit"/> -->
+                <field name="submitButton"><default-field title="Submit"><submit/></default-field></field>
+            </form-single>
+        </container>
+    </widgets>
+</screen>
